@@ -1,4 +1,4 @@
-package com.github.fabriciolfj.javacodeproblems.patterns.strategy;
+package com.github.fabriciolfj.javacodeproblems.patterns.abstractstrategy;
 
 import com.github.fabriciolfj.javacodeproblems.model.Melon;
 

@@ -1,4 +1,4 @@
-package com.github.fabriciolfj.javacodeproblems.patterns.strategy;
+package com.github.fabriciolfj.javacodeproblems.patterns.abstractstrategy;
 
 import com.github.fabriciolfj.javacodeproblems.model.Melon;
 
@@ -16,12 +16,10 @@ public class Simulacao {
         Melon m6 = new Melon("gac", 12000, "br");
 
         List<Melon> melons = Arrays.asList(m1, m2, m3, m4, m5, m6);
-        FilterMelon filter = new FilterMelon(melons);
-        List<Melon> gacs = filter.process(new GacMelonPredicate());
-        List<Melon> huges = filter.process(new HugeMelonPredicate());
 
-        System.out.println("Total gacs: " + gacs.size());
-        System.out.println("Total huge: " + huges.size());
+        List<Melon> anonymous = Filter.process(melons, (Melon m) -> "gac".equalsIgnoreCase(m.getType()));
+
+        System.out.println("Total anonymous: " + anonymous.size());
 
     }
 }
