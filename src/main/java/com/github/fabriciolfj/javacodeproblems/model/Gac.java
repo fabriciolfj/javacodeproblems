@@ -1,15 +1,31 @@
 package com.github.fabriciolfj.javacodeproblems.model;
 
-public class Melon implements Fruit {
+public class Gac implements Fruit {
 
-    private final String type;
-    private final int weight;
-    private final String origin;
+    private String type;
+    private int weight;
+    private String origin;
 
-    public Melon(String type, int weight, String origin) {
+    public Gac() {
+
+    }
+
+    public Gac(String type, int weight, String origin) {
         this.type = type;
         this.weight = weight;
         this.origin = origin;
+    }
+
+    public void setOrigin(String origin) {
+        this.origin = origin;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
     }
 
     public String getType() {
