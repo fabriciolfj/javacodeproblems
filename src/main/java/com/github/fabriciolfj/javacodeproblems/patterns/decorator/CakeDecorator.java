@@ -12,7 +12,7 @@ public class CakeDecorator {
     }
 
     private void reduceDecorations(Function<Cake, Cake>... decorations) {
-        decorator = Stream.of(decorations).reduce(Function.identity(), Function::andThen);
+        decorator = Stream.of(decorations).reduce(f -> f, (x,g) -> g.andThen(g)); //Function.identity(), Function::andThe
     }
 
     public Cake decorate(Cake cake) {

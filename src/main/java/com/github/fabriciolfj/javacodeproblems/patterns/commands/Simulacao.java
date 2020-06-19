@@ -1,4 +1,4 @@
-package com.github.fabriciolfj.javacodeproblems.commands;
+package com.github.fabriciolfj.javacodeproblems.patterns.commands;
 
 public class Simulacao {
 
