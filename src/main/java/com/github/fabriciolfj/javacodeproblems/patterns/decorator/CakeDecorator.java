@@ -1,15 +1,21 @@
 package com.github.fabriciolfj.javacodeproblems.patterns.decorator;
 
-public abstract class CakeDecorator implements Cake {
+import java.util.function.Function;
+import java.util.stream.Stream;
 
-    private final Cake cake;
+public class CakeDecorator {
 
-    public CakeDecorator(Cake cake) {
-        this.cake = cake;
+    private Function<Cake, Cake> decorator;
+
+    public CakeDecorator(Function<Cake, Cake>... decorations) {
+        reduceDecorations(decorations);
     }
 
-    @Override
-    public String decorate() {
-        return cake.decorate();
+    private void reduceDecorations(Function<Cake, Cake>... decorations) {
+        decorator = Stream.of(decorations).reduce(Function.identity(), Function::andThen);
+    }
+
+    public Cake decorate(Cake cake) {
+        return decorator.apply(cake);
     }
 }

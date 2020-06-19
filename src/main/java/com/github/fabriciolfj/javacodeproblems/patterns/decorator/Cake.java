@@ -1,6 +1,18 @@
 package com.github.fabriciolfj.javacodeproblems.patterns.decorator;
 
-public interface Cake {
+public class Cake {
 
-    String decorate();
+    private final String decorations;
+
+    public Cake(String decorations) {
+        this.decorations = decorations;
+    }
+
+    public Cake decorate(String decoration) {
+        return new Cake(getDecorations() + decoration);
+    }
+
+    public String getDecorations() {
+        return decorations;
+    }
 }
