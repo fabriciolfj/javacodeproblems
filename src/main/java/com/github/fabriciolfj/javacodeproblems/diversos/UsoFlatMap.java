@@ -16,6 +16,7 @@ public class UsoFlatMap {
 
         var result = Stream.of(melons)
                 .flatMap(Arrays::stream)
+                .distinct()
                 .collect(Collectors.toList());
 
         System.out.println(result);
