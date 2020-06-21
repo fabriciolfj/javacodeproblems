@@ -6,6 +6,12 @@ public class Melon implements Fruit {
     private final int weight;
     private final String origin;
 
+    public Melon(String type, int weight) {
+        this.type = type;
+        this.weight = weight;
+        this.origin = "test";
+    }
+
     public Melon(String type, int weight, String origin) {
         this.type = type;
         this.weight = weight;
