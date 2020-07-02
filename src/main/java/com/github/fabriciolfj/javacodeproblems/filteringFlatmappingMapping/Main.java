@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Arrays;
 import java.util.Map;
 import java.util.Set;
+import java.util.TreeSet;
 import java.util.stream.Collectors;
 
 public class Main {
@@ -23,6 +24,21 @@ public class Main {
 
         pegandoOsMelonsAcimaDe2000EAgrupandoPorTipo(melons);
         queroAgrouparMelonsAcimaDe2000PorTipoHemi(melons);
+        paraCadaTipoDeMelonQueroAListaDePesosEmOrdemAscendente(melons);
+        queroUmaListaDeMelonsAbaixoDe2000EacimaDe2000(melons);
+    }
+
+    private static void queroUmaListaDeMelonsAbaixoDe2000EacimaDe2000(List<Melon> melons) {
+        Map<Boolean, Set<String>> melonsMapping = melons.stream()
+                .collect(Collectors.partitioningBy(m -> m.getWeight() >  2000, Collectors.mapping(Melon::getType, Collectors.toSet())));
+        System.out.println(melonsMapping);
+    }
+
+    private static void paraCadaTipoDeMelonQueroAListaDePesosEmOrdemAscendente(List<Melon> melons) {
+        Map<String, TreeSet<Integer>> melonsMapping = melons.stream()
+                .collect(Collectors.groupingBy(Melon::getType,
+                        Collectors.mapping(Melon::getWeight, Collectors.toCollection(TreeSet::new)))); //mapea em um novo tipo de lista
+        System.out.println(melonsMapping);
     }
 
     private static void queroAgrouparMelonsAcimaDe2000PorTipoHemi(List<Melon> melons) {
