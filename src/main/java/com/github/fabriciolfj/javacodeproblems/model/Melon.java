@@ -1,5 +1,7 @@
 package com.github.fabriciolfj.javacodeproblems.model;
 
+import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 
 public class Melon implements Fruit {
@@ -12,12 +14,22 @@ public class Melon implements Fruit {
     private final int weight;
     private final String origin;
     private final Sugar sugar;
+    private final List<String> bugs;
+
+    public Melon(String type, List<String> bugs) {
+        this.type = type;
+        this.origin = "test";
+        this.sugar = Sugar.UNKNOWN;
+        this.weight = 100;
+        this.bugs = bugs;
+    }
 
     public Melon(String type, int weight) {
         this.type = type;
         this.weight = weight;
         this.origin = "test";
         this.sugar = Sugar.UNKNOWN;
+        this.bugs = Collections.emptyList();
     }
 
     public Melon(String type, int weight, Sugar sugar) {
@@ -25,6 +37,7 @@ public class Melon implements Fruit {
         this.weight = weight;
         this.origin = "test";
         this.sugar = sugar;
+        this.bugs = Collections.emptyList();
     }
 
     public Melon(String type, int weight, String origin) {
@@ -32,6 +45,7 @@ public class Melon implements Fruit {
         this.weight = weight;
         this.origin = origin;
         this.sugar = Sugar.UNKNOWN;
+        this.bugs = Collections.emptyList();
     }
 
     public String getType() {
@@ -48,6 +62,10 @@ public class Melon implements Fruit {
 
     public Sugar getSugar() {
         return sugar;
+    }
+
+    public List<String> getBugs() {
+        return bugs;
     }
 
     @Override
