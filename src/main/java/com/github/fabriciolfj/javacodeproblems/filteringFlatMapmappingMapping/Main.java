@@ -1,4 +1,4 @@
-package com.github.fabriciolfj.javacodeproblems.filteringFlatmappingMapping;
+package com.github.fabriciolfj.javacodeproblems.filteringFlatMapmappingMapping;
 
 import com.github.fabriciolfj.javacodeproblems.model.Melon;
 
