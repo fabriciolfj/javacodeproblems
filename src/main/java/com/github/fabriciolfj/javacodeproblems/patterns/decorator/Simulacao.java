@@ -12,7 +12,7 @@ public class Simulacao {
         Cake cake = nutsAndCream.decorate(new Cake("Base cake"));
         System.out.println(cake.getDecorations());
 
-        Function<Cake, Cake> teste = (Cake c) -> c.decorate("teste1");
+        Function<Cake, Cake> teste = (Cake c) -> c.decorate("teste1 ");
         Cake teste2 = new Cake("teste");
         Cake apply = teste.apply(teste2);
         System.out.println(apply.getDecorations());
