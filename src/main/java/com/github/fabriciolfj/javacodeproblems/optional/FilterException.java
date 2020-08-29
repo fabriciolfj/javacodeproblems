@@ -9,12 +9,18 @@ public class FilterException {
     public static void main(String[] args) {
         List<Integer> dados = Arrays.asList(1,2,3,4);
 
-        var dado = dados.stream()
+        /*var dado = dados.stream()
                 .filter(n -> Integer.valueOf(String.valueOf(n)).equals(5))
                 .map(n -> Integer.valueOf(String.valueOf(n)) + 2)
                 .findFirst()
-                .orElseThrow(() -> new RuntimeException("Valor não localizado"));
+                .orElseThrow(() -> new RuntimeException("Valor não localizado"));*/
 
-        System.out.println(dado);
+        var dado2 = dados.stream()
+                .filter(n -> Integer.valueOf(String.valueOf(n)).equals(5))
+                .map(n -> Integer.valueOf(String.valueOf(n)) + 2)
+                .findFirst()
+                .orElse(1);
+
+        System.out.println(dado2);
     }
 }
