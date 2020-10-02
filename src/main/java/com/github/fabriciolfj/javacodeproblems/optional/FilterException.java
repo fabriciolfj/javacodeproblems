@@ -16,7 +16,7 @@ public class FilterException {
                 .orElseThrow(() -> new RuntimeException("Valor não localizado"));*/
 
         var dado2 = dados.stream()
-                .filter(n -> Integer.valueOf(String.valueOf(n)).equals(5))
+                .filter(n -> Integer.valueOf(String.valueOf(n)).equals(4))
                 .map(n -> Integer.valueOf(String.valueOf(n)) + 2)
                 .findFirst()
                 .orElse(1);
