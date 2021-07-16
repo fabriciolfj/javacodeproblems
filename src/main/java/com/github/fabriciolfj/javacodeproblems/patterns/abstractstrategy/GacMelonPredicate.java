@@ -1,6 +1,6 @@
 package com.github.fabriciolfj.javacodeproblems.patterns.abstractstrategy;
 
-import com.github.fabriciolfj.javacodeproblems.model.Melon;
+import com.github.fabriciolfj.javacodeproblems.features.model.Melon;
 
 public class GacMelonPredicate implements MelonPredicate {
     @Override

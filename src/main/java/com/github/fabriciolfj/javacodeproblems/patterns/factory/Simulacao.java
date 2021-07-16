@@ -1,7 +1,7 @@
 package com.github.fabriciolfj.javacodeproblems.patterns.factory;
 
-import com.github.fabriciolfj.javacodeproblems.model.Gac;
-import com.github.fabriciolfj.javacodeproblems.model.Melon;
+import com.github.fabriciolfj.javacodeproblems.features.model.Gac;
+import com.github.fabriciolfj.javacodeproblems.features.model.Melon;
 
 
 public class Simulacao {

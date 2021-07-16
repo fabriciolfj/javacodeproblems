@@ -1,10 +1,10 @@
 package com.github.fabriciolfj.javacodeproblems.patterns.factory;
 
-import com.github.fabriciolfj.javacodeproblems.model.Cantaloupe;
-import com.github.fabriciolfj.javacodeproblems.model.Fruit;
-import com.github.fabriciolfj.javacodeproblems.model.Gac;
-import com.github.fabriciolfj.javacodeproblems.model.Hemi;
-import com.github.fabriciolfj.javacodeproblems.model.Melon;
+import com.github.fabriciolfj.javacodeproblems.features.model.Cantaloupe;
+import com.github.fabriciolfj.javacodeproblems.features.model.Fruit;
+import com.github.fabriciolfj.javacodeproblems.features.model.Gac;
+import com.github.fabriciolfj.javacodeproblems.features.model.Hemi;
+import com.github.fabriciolfj.javacodeproblems.features.model.Melon;
 
 import java.util.Map;
 import java.util.function.Supplier;
